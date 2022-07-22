@@ -1,12 +1,24 @@
 .calc-wrap{
   display: flex;
   align-items: flex-end;
-  flex-wrap: wrap;
   padding-top: 62px;
   margin-bottom: 100px;
+  @media only screen and (max-width: 1299px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  >.col-md-6{
+    @media only screen and (max-width: 1299px) {
+      width: 840px;
+      max-width: 100%;
+    }
+  }
 }
 
 .calc-left{
+  @media only screen and (max-width: 1299px) {
+    margin-bottom: 40px;
+  }
 }
 
 .calc-left__title{
@@ -53,6 +65,12 @@
   line-height: 140%;
   text-transform: uppercase;
   padding: 9px 25px 3px;
+  @media only screen and (max-width: 1599px) {
+    padding: 9px 15px 3px;
+  }
+  @include bp(md) {
+    font-size: 15px;
+  }
 }
 
 .calc-main__row{
@@ -73,6 +91,9 @@
       &:first-child{
         font-size: 16px;
         line-height: 120%;
+        @include bp(md) {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -83,6 +104,12 @@
     color: #000;
     text-transform: uppercase;
     padding-left: 25px;
+    @media only screen and (max-width: 1599px) {
+      padding-left: 15px;
+    }
+    @include bp(md) {
+      font-size: 15px;
+    }
   }
   &.bot{
     justify-content: center;
@@ -94,6 +121,9 @@
     &:first-child{
       width: 216px;
       padding-left: 25px;
+      @media only screen and (max-width: 1599px) {
+        padding-left: 15px;
+      }
     }
     &:nth-child(2){
       width: 96px;
@@ -187,6 +217,25 @@
   padding: 34px;
   border: 1px solid $main;
   text-align: center;
+  @media only screen and (max-width: 1679px) {
+    border-radius: 180px/70px;
+  }
+  @media only screen and (max-width: 1599px) {
+    border-radius: 170px/70px;
+    padding: 34px 24px;
+  }
+  @media only screen and (max-width: 1499px) {
+    border-radius: 170px/90px;
+  }
+  @media only screen and (max-width: 1299px) {
+    border-radius: 200px/70px;
+  }
+  @media only screen and (max-width: 899px) {
+    border-radius: 200px/80px;
+  }
+  @include bp(md) {
+    border-radius: 160px/80px;
+  }
   &:before{
     position: absolute;
     content: '';
@@ -213,6 +262,9 @@
     font-size: 42px;
     line-height: 100%;
     font-family: $title;
+    @include bp(xxl) {
+      font-size: 38px;
+    }
   }
   >span{
     display: block;

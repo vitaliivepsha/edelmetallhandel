@@ -33,6 +33,9 @@
   height: 115px;
   margin-right: 50px;
   opacity: 1;
+  @include bp(lg) {
+    margin-right: 30px;
+  }
   img{
     width: 100%;
     height: 100%;
@@ -72,6 +75,9 @@
 .footer-right{
   display: flex;
   gap: 128px;
+  @include bp(lg) {
+    gap: 70px;
+  }
 }
 
 .footer-menu{

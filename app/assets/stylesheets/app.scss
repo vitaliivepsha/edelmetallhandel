@@ -412,6 +412,7 @@ textarea:-webkit-autofill:hover {
   font-size: 16px;
   line-height: 140%;
   pointer-events: none;
+  z-index: 2;
 }
 
 .overlay {

@@ -7,6 +7,10 @@
 .order-wrapper{
   display: flex;
   flex-wrap: wrap;
+  @include bp(lg) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .order-title{
@@ -20,6 +24,9 @@
   margin: 0 auto;
   max-width: 560px;
   min-height: 84px;
+  @include bp(lg) {
+    min-height: unset;
+  }
 }
 
 .order-form{
@@ -27,9 +34,17 @@
   background: #fff;
   border-radius: 3px;
   padding: 82px 70px 86px;
+  @include bp(lg) {
+    margin-bottom: 60px;
+  }
   .main-form{
+    .form-footer{
+      @include bp(lg) {
+        flex-direction: row;
+      }
+    }
     .checkbox-wrapper{
-      max-width: 302px;
+      max-width: 317px;
     }
   }
 }
@@ -38,6 +53,9 @@
   margin: 90px auto 0;
   width: 580px;
   max-width: 100%;
+  @include bp(lg) {
+    margin-top: 60px;
+  }
 }
 
 .order-items__wrapper{
