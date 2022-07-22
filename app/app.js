@@ -5,8 +5,10 @@
 if (process.env.NODE_ENV !== 'production') {
   require('./assets/templates/layouts/index.html');
   require('./assets/templates/layouts/contacts.html');
-  require('./assets/templates/layouts/404.html');
   require('./assets/templates/layouts/about.html');
+  require('./assets/templates/layouts/404.html');
+  require('./assets/templates/layouts/404-search.html');
+  require('./assets/templates/layouts/404-search-nf.html');
 }
 
 // Depends
