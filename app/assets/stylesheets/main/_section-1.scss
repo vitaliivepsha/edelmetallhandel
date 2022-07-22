@@ -187,5 +187,8 @@
   }
   .btn{
     width: 310px;
+    &.disabled{
+      opacity: 1;
+    }
   }
 }

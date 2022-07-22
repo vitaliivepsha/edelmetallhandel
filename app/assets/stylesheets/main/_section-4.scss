@@ -1,0 +1,53 @@
+.section-trading{
+  padding-top: 148px;
+  padding-bottom: 78px;
+  text-align: center;
+  .btn{
+    width: 380px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.trading-title{
+  position: relative;
+  display: block;
+  font-family: $title;
+  font-size: 42px;
+  line-height: 100%;
+  color: $main;
+  width: 478px;
+  max-width: 100%;
+  margin: 0 auto 30px;
+  &:before{
+    position: absolute;
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1px solid $main;
+    background-color: #fff;
+    bottom: calc(100% + 28px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &:after{
+    position: absolute;
+    content: '';
+    bottom: calc(100% + 37px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 65px;
+    background-color: $main;
+  }
+}
+
+.trading-descr{
+  font-size: 16px;
+  line-height: 140%;
+  color: $text;
+  margin: 0 auto 30px;
+  width: 600px;
+  max-width: 100%;
+}

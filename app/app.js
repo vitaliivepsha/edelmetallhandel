@@ -65,6 +65,17 @@ $(function() {
         }
     });
 
+    // checkbox change
+
+    $('.checkbox-wrapper input').on('change', function() {
+        var btn = $(this).closest('form').find('button[type=submit]');
+        if (this.checked) {
+            btn.prop('disabled', false);
+        } else {
+            btn.prop('disabled', true);
+        }
+    });
+
     // select
 
   $('.select').SumoSelect({
