@@ -48,6 +48,7 @@
     @include bp(xs) {
       margin-bottom: 13px;
       font-size: 24px;
+      word-break: break-word;
     }
 
     & ~ h2 {
@@ -151,6 +152,37 @@
     width: fit-content;
     min-width: 140px;
   }
+}
+
+.btn-up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 63px;
+  height: 63px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  outline: none;
+  background-color: rgba(#fff, 0.8);
+  border: 1px solid rgba($main, 0.5);
+  transition: border linear 0.2s, background-color linear 0.2s;
+  &:hover {
+    border: 1px solid rgba($main, 0);
+    background-color:rgba($main, 0.5);
+    & svg path {
+      fill: #fff;
+    }
+  }
+  @include bp(xs) {
+    right: 35px;
+    bottom: 35px;
+    width: 45px;
+    height: 45px;
+    }
 }
 
 

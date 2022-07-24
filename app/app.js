@@ -10,6 +10,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/404-search.html');
     require('./assets/templates/layouts/404-search-nf.html');
     require('./assets/templates/layouts/impresum.html');
+    require('./assets/templates/layouts/privacy.html');
+    require('./assets/templates/layouts/product-diamonds.html');
 }
 
 // Depends
@@ -185,6 +187,20 @@ $(function () {
         $(this)
             .addClass('active').siblings().removeClass('active')
             .closest('.tabs-wrapper').find('.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
+    });
+
+    // btn go top
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 400) {
+            $("#gotop").fadeIn();
+        } else {
+            $("#gotop").fadeOut();
+        }
+    });
+    $("#gotop").click(function() {
+        $('body, html').animate({
+            scrollTop: 0
+        }, 500);
     });
 
     // map
