@@ -119,8 +119,8 @@ main {
   outline: none !important;
   position: relative;
   @include bp(xs) {
-    height: 40px;
-    font-size: 14px;
+    height: 50px;
+    font-size: 16px;
     line-height: 17px;
   }
   &:focus {
@@ -140,7 +140,7 @@ main {
     color: $main;
     background-color: transparent;
     &:hover {
-      color: #fff;
+      color: #fff !important;
       background-color: $main;
     }
     &:focus {
@@ -152,11 +152,13 @@ main {
 .input-wrapper {
   position: relative;
   width: 100%;
+
   &.filled{
     .input{
       +label{
         opacity: 0;
         visibility: hidden;
+
       }
     }
   }
@@ -170,10 +172,12 @@ main {
       line-height: 140%;
       font-weight: 400;
       margin-bottom: 0;
+      pointer-events: none;
+
       @include bp(xs) {
         font-size: 12px;
         left: 10px;
-        top: 7px;
+        top: 10px;
       }
       span{
         color: $main;
@@ -242,7 +246,11 @@ main {
         height: 50px;
         padding: 0 15px;
         cursor: pointer;
+        @include bp(xs) {
+          height: 35px;
+          }
         span{
+          
           color: $text;
           cursor: pointer;
           &.placeholder{
@@ -310,8 +318,8 @@ main {
   outline: none !important;
   box-shadow: none !important;
   @include bp(xs) {
-    padding: 0 10px;
     height: 35px;
+    padding: 0 10px;
     font-size: 12px;
   }
   &::placeholder {
@@ -339,6 +347,7 @@ main {
   outline: none !important;
   box-shadow: none !important;
   @include bp(xs) {
+    font-size: 12px;
     padding: 10px;
   }
   &::placeholder {
