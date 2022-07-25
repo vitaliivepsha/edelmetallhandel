@@ -11,6 +11,11 @@
     flex-direction: column;
     align-items: center;
   }
+  .col-md-12{
+    @include bp(sm) {
+      max-width: 100%;
+    }
+  }
 }
 
 .order-title{
@@ -37,10 +42,16 @@
   @include bp(lg) {
     margin-bottom: 60px;
   }
+  @include bp(sm) {
+    padding: 40px;
+  }
   .main-form{
     .form-footer{
       @include bp(lg) {
         flex-direction: row;
+      }
+      @include bp(sm) {
+        flex-direction: column;
       }
     }
     .checkbox-wrapper{
@@ -56,6 +67,9 @@
   @include bp(lg) {
     margin-top: 60px;
   }
+  @include bp(sm) {
+    max-width: 100%;
+  }
 }
 
 .order-items__wrapper{
@@ -65,8 +79,18 @@
 
 .order-item{
   margin-bottom: 60px;
+  @include bp(sm) {
+    order: 1;
+  }
+  &__mid{
+    @include bp(sm) {
+      order: 2;
+    }
+  }
   &__last{
-    
+    @include bp(sm) {
+      order: 3;
+    }
   }
 }
 
