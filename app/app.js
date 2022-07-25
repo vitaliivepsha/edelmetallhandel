@@ -94,8 +94,6 @@ $(function () {
 
     // upload file
 
-
-
     $(document).delegate("#upload-files", "change", function () {
         var files = $("#upload-files")[0].files;
         for (var i = 0; i < files.length; i++) {
@@ -118,21 +116,6 @@ $(function () {
         $(this).closest(".file").remove();
         $(this).remove();
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     // mobile menu
