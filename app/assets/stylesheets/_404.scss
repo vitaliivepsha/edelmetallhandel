@@ -32,6 +32,25 @@
   font-size: 42px !important;
   line-height: 1 !important;
   text-align: center;
+  &.page__title--product {
+    padding: 57px;
+    padding-top: 65px;
+    padding-bottom: 50px;
+    @include bp(sm) {
+      margin-top: 9px;
+      margin-bottom: 55px;
+      padding: 20px;
+      padding-top: 32px;
+      padding-bottom: 30px;
+      }
+
+      &::after {
+        @media (max-width: 420px) {
+        top: calc(100% - 26px);
+      }
+    }
+
+  }
   @include bp(sm) {
     min-height: 100px;
     max-width: 400px;
