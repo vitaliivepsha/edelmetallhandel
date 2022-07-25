@@ -28,17 +28,16 @@
   font-family: $title;
   border: 1px solid $main;
   border-radius: 50% / 50%;
-  font-weight: 400;
-  font-size: 42px;
-  line-height: 100%;
+  font-weight: 400 !important;
+  font-size: 42px !important;
+  line-height: 1 !important;
   text-align: center;
   @include bp(sm) {
-    max-width: 400px;
-    height: 100px;
     min-height: 100px;
+    max-width: 400px;
     margin-top: 18px;
     margin-bottom: 52px;
-    font-size: 28px;
+    font-size: 28px !important;
   }
   @media (max-width: 420px) {
     max-width: 290px;
@@ -52,11 +51,11 @@
     height: 54px;
     background: url("../images/icons/star.svg") no-repeat center;
     @include bp(sm) {
-      top: -20px;
+      top: -16px;
       background: url("../images/icons/star-sm.svg") no-repeat center;
     }
     @media (max-width: 420px) {
-      top: -19px;
+      top: -17px;
       right: 34px;
     }
 
