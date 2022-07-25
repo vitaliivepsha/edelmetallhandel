@@ -456,6 +456,19 @@ textarea:-webkit-autofill:hover {
   transition: linear 0.2s;
 }
 
+.hide-mob{
+  @include bp(xs) {
+    display: none;
+  }
+}
+
+.show-mob{
+  display: none;
+  @include bp(xs) {
+    display: flex;
+  }
+}
+
 ::selection {
   background: rgba(#000, 0.35);
   color: #fff;
