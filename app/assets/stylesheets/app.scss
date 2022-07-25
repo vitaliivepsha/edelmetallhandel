@@ -177,7 +177,7 @@ main {
       @include bp(xs) {
         font-size: 12px;
         left: 10px;
-        top: 10px;
+        top: 9px;
       }
       span{
         color: $main;
@@ -200,8 +200,15 @@ main {
     &.required-select{
       .SumoSelect{
         >.CaptionCont{
-          span{
+          span{font-size: 16px;
+            @include bp(xs) {
+              font-size: 12px;
+            }
             &.placeholder{
+              font-size: 16px;
+             @include bp(xs) {
+               font-size: 12px;
+               }
               &:after{
                 content: ' *';
                 color: $main;
@@ -233,7 +240,7 @@ main {
       }
       &.open{
         >.optWrapper{
-          top: 100%;
+          top: calc(100% + 1px);
         }
       }
       >.CaptionCont{
@@ -244,7 +251,7 @@ main {
         align-items: center;
         width: 100%;
         height: 50px;
-        padding: 0 15px;
+        padding: 0 10px;
         cursor: pointer;
         @include bp(xs) {
           height: 35px;
@@ -261,6 +268,9 @@ main {
           margin-bottom: 0;
           width: 44px;
           cursor: pointer;
+          @include bp(xs) {
+            width: 26px;
+            }
           >i{
             width: 8px;
             height: 8px;
@@ -286,6 +296,11 @@ main {
               label{
                 font-weight: 400;
                 margin-bottom: 0;
+                font-size: 16px;
+                @include bp(xs) {
+                  padding-left: 5px;
+                  font-size: 12px;
+                }
               }
             }
           }

@@ -2,6 +2,9 @@
   min-height: 470px;
   padding-top: 10px;
   padding-bottom: 79px;
+  @include bp(xs) {
+    padding-bottom: 39px;
+  }
 
   & .row {
     display: flex;
@@ -11,7 +14,6 @@
 }
 
 .product-buying__desc {
-
   max-width: 654px;
   min-height: 470px;
   @include bp(lg) {
@@ -21,11 +23,11 @@
     margin-bottom: 60px;
     @include bp(xs) {
       margin-bottom: 72px;
-      }
+    }
   }
 
   &:after {
-      content: "";
+    content: "";
     display: none;
     position: absolute;
     bottom: -29px;
@@ -49,7 +51,7 @@
     color: $text;
     @include bp(xs) {
       font-size: 12px;
-      }
+    }
 
     & + p {
       margin-top: 7px;
@@ -94,10 +96,30 @@
     min-height: auto;
   }
 
+
   & + .product-buying__inner {
+    position: relative;
     @include bp(lg) {
       margin-top: 50px;
     }
+    @include bp(xs) {
+      margin-top: 76px;
+    }
+
+    &:after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: -40px;
+      right: -15px;
+      left: -15px;
+      height: 1px;
+      background-color: #D9D9D9;
+      @include bp(xs) {
+        display: block;
+      }
+    }
+
   }
 
   & a {
@@ -124,8 +146,9 @@
     height: unset;
   }
   @include bp(xs) {
+    margin-bottom: 28px;
     padding: 0 36px;
-    }
+  }
 
   & picture {
     width: 100%;
@@ -147,6 +170,9 @@
   background-color: #E4E4E4;
   @include bp(md) {
     padding: 38px 0;
+  }
+  @include bp(xs) {
+    padding: 50px 0;
   }
 
   & .row {
@@ -175,6 +201,9 @@
   @include bp(sm) {
     max-width: 661px;
   }
+  @include bp(xs) {
+    margin-bottom: 15px;
+    }
 
   & > span {
     display: block;
@@ -187,6 +216,11 @@
     font-size: 42px;
     line-height: 100%;
     text-align: center;
+    @include bp(xs) {
+      max-width: 240px;
+      margin-bottom: 13px;
+      font-size: 24px;
+    }
   }
 
   & > small {
@@ -199,6 +233,9 @@
     line-height: 140%;
     text-align: center;
     color: $main;
+    @include bp(xs) {
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -227,43 +264,59 @@
     padding: 72px 30px 30px 30px;
   }
   @include bp(xs) {
-    padding: 73px 55px 30px 55px;
+    min-height: 200px;
+    padding: 52px 25px 20px 25px;
   }
 
 
   &:nth-child(1) {
     & .card-item__pic {
-      top: 29px;
-      right: 2px;
+        top: 6px;
+        right: -17px;
 
-      & picture {
-        max-height: 66px;
-      }
+        & picture {
+          max-height: 47px;
+        }
     }
   }
 
   &:nth-child(2) {
+    & .card-item__text {
+      max-width: 200px;
+    }
     & .card-item__pic {
-      top: 30px;
-      right: 13px;
+      top: 8px;
+      right: -8px;
 
       & picture {
-        max-height: 40px;
+        max-height: 42px;
       }
     }
   }
 
   &:nth-child(3) {
+    & .card-item__text {
+      max-width: 240px;
+    }
     & .card-item__pic {
-      top: 16px;
-      right: -21px;
+      top: 10px;
+      right: -27px;
+    }
+    & picture {
+      max-height: 61px;
     }
   }
 
   &:nth-child(4) {
+    & .card-item__text {
+      max-width: 240px;
+    }
     & .card-item__pic {
-      top: 23px;
-      right: -5px;
+      top: 1px;
+      right: -18px;
+    }
+    & picture {
+      max-height: 46px;
     }
   }
 
@@ -276,10 +329,11 @@
     line-height: 100%;
     color: $main;
     text-align: left;
+
   }
 
   & .card-item__text {
-    max-width: 192px;
+    max-width: 220px;
     margin: 0;
     font-weight: 400;
     font-size: 16px;
@@ -329,11 +383,12 @@
     @media (min-width: 1199px) and (max-width: 1441px) {
       padding: 31px 32px 50px;
     }
-
     @include bp(sm) {
       width: 100%;
-
       padding: 31px 32px 50px;
+    }
+    @include bp(xs) {
+      padding: 25px 10px 50px;
     }
 
     & .order-title {
@@ -342,6 +397,12 @@
       font-size: 30px;
       line-height: 100%;
       text-align: center;
+      @include bp(xs) {
+        margin: 0 auto;
+        margin-bottom: 28px;
+        max-width: 260px;
+        font-size: 24px;
+        }
     }
   }
 
@@ -355,10 +416,16 @@
 
   & .main-form .form-row.two-inputs.sm .input-wrapper {
     width: calc(78% - 3px);
+    @include bp(xs) {
+      width: calc(67% - 3px);
+      }
   }
 
   & .main-form .form-row.two-inputs.sm .input-wrapper + .input-wrapper {
     width: calc(23% - 13px);
+    @include bp(xs) {
+      width: calc(35% - 12px);
+      }
   }
 
   .order-form .main-form .checkbox-wrapper {
@@ -372,6 +439,12 @@
       flex-direction: column;
     }
   }
+  .form-row .textarea{
+    @include bp(xs) {
+      height: 76px;
+    }
+  }
+
 
   & .main-form .btn {
     width: 70%;
