@@ -32,6 +32,9 @@
   @include bp(lg) {
     min-height: unset;
   }
+  @include bp(xs) {
+    font-size: 28px;
+  }
 }
 
 .order-form{
@@ -115,4 +118,7 @@
   font-size: 16px;
   line-height: 140%;
   text-transform: uppercase;
+  @include bp(xs) {
+    font-size: 12px;
+  }
 }

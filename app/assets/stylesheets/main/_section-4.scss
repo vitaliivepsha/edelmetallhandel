@@ -19,6 +19,9 @@
   width: 478px;
   max-width: 100%;
   margin: 0 auto 30px;
+  @include bp(xs) {
+    font-size: 28px;
+  }
   &:before{
     position: absolute;
     content: '';

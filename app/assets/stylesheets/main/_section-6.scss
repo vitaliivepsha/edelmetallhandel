@@ -10,6 +10,9 @@
   font-size: 42px;
   line-height: 100%;
   margin-bottom: 15px;
+  @include bp(xs) {
+    font-size: 28px;
+  }
 }
 
 .tips-descr{
@@ -46,6 +49,9 @@
 .tips-wrapper{
   display: flex;
   justify-content: center;
+  @include bp(xs) {
+    flex-direction: column;
+  }
 }
 
 .tips-item{
@@ -56,6 +62,10 @@
   border-radius: 3px;
   margin: 0 10px;
   padding: 80px 40px 30px 30px;
+  @include bp(xs) {
+    width: 100%;
+    margin: 0 auto 42px;
+  }
   >i{
     width: 79px;
     height: 79px;

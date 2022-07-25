@@ -25,6 +25,9 @@
     line-height: 100%;
     text-align: center;
     font-family: $title;
+    @include bp(xs) {
+      font-size: 28px;
+    }
   }
 }
 
@@ -34,6 +37,9 @@
   @include bp(lg) {
     flex-direction: column;
     align-items: center;
+  }
+  @include bp(xs) {
+    margin: 0 -15px;
   }
 }
 
@@ -46,6 +52,11 @@
   margin: 0 10px;
   position: relative;
   padding: 40px 45px;
+  @include bp(xs) {
+    width: 100vw;
+    border-radius: 0;
+    border: none;
+  }
   +.purchase-block{
     @include bp(lg) {
       margin-top: 20px;
