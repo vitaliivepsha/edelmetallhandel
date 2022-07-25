@@ -31,14 +31,14 @@
 
 .main-slider{
   @include bp(md) {
-    order: 2;
+    order: 3;
   }
-  .slide{
+  /*.slide{
     @include bp(md) {
       display: flex !important;
       flex-direction: column-reverse;
     }
-  }
+  }*/
 }
 
 .main-slider__pic{
@@ -47,6 +47,11 @@
   height: 32.3vw;
   min-height: 515px;
   max-height: 720px;
+  @include bp(xs) {
+    height: 119vw;
+    min-height: unset;
+    max-height: unset;
+  }
   img{
     width: 100%;
     height: 100%;
@@ -77,7 +82,14 @@
   }
   @include bp(md) {
     font-size: 34px;
-    border: none;
+    border-right: none;
+    border-bottom: 1px solid #D9D9D9;
+    padding: 20px 40px;
+  }
+  @include bp(xs) {
+    height: auto;
+    padding: 10px 15px;
+    font-size: 28px;
   }
 }
 
@@ -88,8 +100,12 @@
   transform: translateX(-50%);
   bottom: 207px;
   @include bp(md) {
-    order: 3;
-    bottom: 40px;
+    order: 2;
+    bottom: auto;
+    top: 470px;
+  }
+  @include bp(xs) {
+    top: calc(119vw - 53px);
   }
   .slick-dots{
     display: flex;
@@ -137,7 +153,14 @@
   @include bp(md) {
     order: 1;
     bottom: auto;
-    top: 100px;
+    top: 452px;
+    gap: unset;
+  }
+  @include bp(sm) {
+    right: 15px;
+  }
+  @include bp(xs) {
+    top: calc(119vw - 56px);
   }
 }
 
@@ -147,16 +170,52 @@
   border-radius: 50%;
   width: 45px;
   height: 45px;
+  @include bp(xs) {
+    width: 33px;
+    height: 33px;
+  }
   &:hover{
     background-color: $main;
     svg{
       line{
         stroke: #fff;
       }
+      circle{
+        @include bp(md) {
+          stroke: $main;
+        }
+      }
       path{
         fill: #fff;
       }
     }
+  }
+  svg{
+    @include bp(xs) {
+      width: 100%;
+      height: 100%;
+    }
+    line{
+      @include bp(md) {
+        stroke: #fff;
+      }
+    }
+    circle{
+      @include bp(md) {
+        stroke: #fff;
+      }
+    }
+    path{
+      @include bp(md) {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.main-slider__prev{
+  @include bp(md) {
+    display: none;
   }
 }
 
@@ -187,6 +246,9 @@
     padding-left: 0;
     padding-bottom: 40px;
   }
+  @include bp(xs) {
+    padding-top: 25px;
+  }
 }
 
 .main-right__title{
@@ -201,6 +263,10 @@
     font-size: 36px;
     margin-bottom: 30px;
   }
+  @include bp(xs) {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
 }
 
 .main-form{
@@ -211,8 +277,14 @@
       &.lg{
         .input-wrapper{
           width: calc(54% - 5px);
+          @include bp(xs) {
+            width: calc(50% - 5px);
+          }
           +.input-wrapper{
             width: calc(46% - 5px);
+            @include bp(xs) {
+              width: calc(50% - 5px);
+            }
           }
         }
       }
@@ -222,10 +294,16 @@
           @include bp(lg) {
             width: calc(70% - 5px);
           }
+          @include bp(xs) {
+            width: calc(66.6% - 5px);
+          }
           +.input-wrapper{
             width: calc(24% - 5px);
             @include bp(lg) {
               width: calc(30% - 5px);
+            }
+            @include bp(xs) {
+              width: calc(33.3% - 5px);
             }
           }
         }
@@ -236,10 +314,19 @@
       justify-content: space-between;
       .input-wrapper{
         width: calc(40% - 5px);
+        @include bp(xs) {
+          width: calc(33.3% - 5px);
+        }
         +.input-wrapper{
           width: calc(28% - 10px);
+          @include bp(xs) {
+            width: calc(33.3% - 5px);
+          }
           +.input-wrapper{
             width: calc(32% - 5px);
+            @include bp(xs) {
+              width: calc(33.3% - 5px);
+            }
           }
         }
       }

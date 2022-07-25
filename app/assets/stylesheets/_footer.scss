@@ -20,6 +20,9 @@
 .footer-wrapper{
   display: flex;
   justify-content: space-between;
+  @include bp(sm) {
+    flex-direction: column;
+  }
 }
 
 .footer-left{
@@ -77,6 +80,9 @@
   gap: 128px;
   @include bp(lg) {
     gap: 70px;
+  }
+  @include bp(sm) {
+    margin-top: 30px;
   }
 }
 

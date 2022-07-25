@@ -21,6 +21,13 @@ body {
   @include bp(md) {
     display: block;
   }
+  &.menu-opened{
+    height: 100vh;
+    overflow: hidden;
+    .mobile-menu__wrapper{
+      display: block;
+    }
+  }
 }
 
 ol,
@@ -166,13 +173,17 @@ main {
       font-weight: 400;
       margin-bottom: 0;
       pointer-events: none;
+
       @include bp(xs) {
         font-size: 12px;
         left: 10px;
-        top: 11px;
-        }
+        top: 10px;
+      }
       span{
         color: $main;
+        @include bp(xs) {
+          color: #000;
+        }
       }
     }
     &:focus{
@@ -183,6 +194,9 @@ main {
     }
   }
   &.select-wrapper{
+    select{
+      display: none;
+    }
     &.required-select{
       .SumoSelect{
         >.CaptionCont{
@@ -428,6 +442,11 @@ textarea:-webkit-autofill:hover {
   line-height: 140%;
   pointer-events: none;
   z-index: 2;
+  @include bp(xs) {
+    font-size: 12px;
+    padding: 5px 9px;
+    top: 2px;
+  }
 }
 
 .overlay {
