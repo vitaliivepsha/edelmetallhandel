@@ -12,6 +12,9 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/impresum.html');
     require('./assets/templates/layouts/privacy.html');
     require('./assets/templates/layouts/product-diamonds.html');
+    require('./assets/templates/layouts/product-luxusuhren.html');
+    require('./assets/templates/layouts/product-muenzen.html');
+    require('./assets/templates/layouts/product-schmuck.html');
 }
 
 // Depends
