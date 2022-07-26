@@ -1,6 +1,10 @@
 .section-tips{
   padding-top: 70px;
   padding-bottom: 130px;
+  @include bp(xs) {
+    padding-top: 50px;
+    padding-bottom: 8px;
+  }
 }
 
 .tips-title{
@@ -12,6 +16,7 @@
   margin-bottom: 15px;
   @include bp(xs) {
     font-size: 28px;
+    margin-bottom: 10px;
   }
 }
 
@@ -22,6 +27,10 @@
   line-height: 140%;
   color: $main;
   position: relative;
+  @include bp(xs) {
+    font-size: 12px;
+    margin-bottom: 40px;
+  }
   &:before{
     position: absolute;
     content: '';
@@ -33,6 +42,9 @@
     top: calc(100% + 112px);
     left: 50%;
     transform: translateX(-50%);
+    @include bp(xs) {
+      display: none;
+    }
   }
   &:after{
     position: absolute;
@@ -43,6 +55,9 @@
     width: 1px;
     height: 80px;
     background-color: $main;
+    @include bp(xs) {
+      display: none;
+    }
   }
 }
 
@@ -65,6 +80,8 @@
   @include bp(xs) {
     width: 100%;
     margin: 0 auto 42px;
+    min-height: 181px;
+    padding: 40px 15px 25px;
   }
   >i{
     width: 79px;
@@ -77,6 +94,18 @@
     left: 30px;
     border-radius: 50%;
     background-color: $main;
+    @include bp(xs) {
+      width: 55px;
+      height: 55px;
+      left: 15px;
+      padding: 13px;
+    }
+    svg{
+      @include bp(xs) {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
   }
   >span{
     display: block;
@@ -84,10 +113,17 @@
     font-size: 21px;
     line-height: 140%;
     margin-bottom: 18px;
+    @include bp(xs) {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
   }
   >div{
     font-size: 16px;
     line-height: 140%;
     color: $text;
+    @include bp(xs) {
+      font-size: 12px;
+    }
   }
 }

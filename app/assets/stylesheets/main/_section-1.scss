@@ -215,7 +215,7 @@
 
 .main-slider__prev{
   @include bp(md) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -296,7 +296,7 @@
             width: calc(70% - 5px);
           }
           @include bp(xs) {
-            width: calc(66.6% - 5px);
+            width: calc(66.66666% - 5px);
           }
           +.input-wrapper{
             width: calc(24% - 5px);
@@ -304,7 +304,7 @@
               width: calc(30% - 5px);
             }
             @include bp(xs) {
-              width: calc(33.3% - 5px);
+              width: calc(33.33333% - 5px);
             }
           }
         }
@@ -316,17 +316,17 @@
       .input-wrapper{
         width: calc(40% - 5px);
         @include bp(xs) {
-          width: calc(33.3% - 5px);
+          width: calc(33.3% - 7px);
         }
         +.input-wrapper{
           width: calc(28% - 10px);
           @include bp(xs) {
-            width: calc(33.3% - 5px);
+            width: calc(33.3% - 7px);
           }
           +.input-wrapper{
             width: calc(32% - 5px);
             @include bp(xs) {
-              width: calc(33.3% - 5px);
+              width: calc(33.3% - 6px);
             }
           }
         }
@@ -344,6 +344,9 @@
       margin-top: 20px;
       flex-direction: column;
     }
+    @include bp(xs) {
+      margin-top: -3px;
+    }
   }
   .checkbox-wrapper{
     max-width: 331px;
@@ -354,6 +357,9 @@
   }
   .btn{
     width: 310px;
+    @include bp(xs) {
+      width: 100%;
+    }
     &:disabled{
       opacity: 1;
     }

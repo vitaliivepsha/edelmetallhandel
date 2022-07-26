@@ -2,6 +2,10 @@
   padding-top: 148px;
   padding-bottom: 78px;
   text-align: center;
+  @include bp(xs) {
+    padding-top: 118px;
+    padding-bottom: 42px;
+  }
   .btn{
     width: 380px;
     max-width: 100%;
@@ -21,6 +25,7 @@
   margin: 0 auto 30px;
   @include bp(xs) {
     font-size: 28px;
+    margin-bottom: 13px;
   }
   &:before{
     position: absolute;
@@ -33,6 +38,11 @@
     bottom: calc(100% + 28px);
     left: 50%;
     transform: translateX(-50%);
+    @include bp(xs) {
+      width: 7px;
+      height: 7px;
+      bottom: calc(100% + 20px);
+    }
   }
   &:after{
     position: absolute;
@@ -43,6 +53,10 @@
     width: 1px;
     height: 65px;
     background-color: $main;
+    @include bp(xs) {
+      bottom: calc(100% + 27px);
+      height: 45px;
+    }
   }
 }
 
@@ -53,4 +67,8 @@
   margin: 0 auto 30px;
   width: 600px;
   max-width: 100%;
+  @include bp(xs) {
+    font-size: 12px;
+    margin-bottom: 22px;
+  }
 }

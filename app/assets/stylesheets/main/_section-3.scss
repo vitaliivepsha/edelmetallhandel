@@ -2,10 +2,17 @@
   background-color: #F5F5F5;
   padding-top: 50px;
   padding-bottom: 85px;
+  @include bp(xs) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .purchase-title__wrapper{
   margin-bottom: 28px;
+  @include bp(xs) {
+    margin-bottom: 13px;
+  }
   >i{
     width: 87px;
     height: 87px;
@@ -15,8 +22,18 @@
     justify-content: center;
     background-color: $main;
     margin: 0 auto 24px;
+    @include bp(xs) {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 14px;
+    }
     svg{
       margin-top: -3px;
+      @include bp(xs) {
+        width: 18px;
+        height: 22px;
+        margin-top: -1px;
+      }
     }
   }
   >span{
@@ -38,9 +55,6 @@
     flex-direction: column;
     align-items: center;
   }
-  @include bp(xs) {
-    margin: 0 -15px;
-  }
 }
 
 .purchase-block{
@@ -53,9 +67,9 @@
   position: relative;
   padding: 40px 45px;
   @include bp(xs) {
-    width: 100vw;
-    border-radius: 0;
+    width: 100%;
     border: none;
+    padding: 40px 43px 50px;
   }
   +.purchase-block{
     @include bp(lg) {
@@ -94,5 +108,13 @@
     bottom: 40px;
     max-width: 122px;
     object-fit: contain;
+    @include bp(xs) {
+      bottom: auto;
+      top: 25px;
+      right: 13px;
+      width: 82px;
+      max-width: 82px;
+      height: 67px;
+    }
   }
 }

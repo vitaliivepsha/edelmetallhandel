@@ -121,7 +121,6 @@ main {
   @include bp(xs) {
     height: 50px;
     font-size: 16px;
-    line-height: 17px;
   }
   &:focus {
     color: #fff;
@@ -152,13 +151,11 @@ main {
 .input-wrapper {
   position: relative;
   width: 100%;
-
   &.filled{
     .input{
       +label{
         opacity: 0;
         visibility: hidden;
-
       }
     }
   }
@@ -173,17 +170,13 @@ main {
       font-weight: 400;
       margin-bottom: 0;
       pointer-events: none;
-
       @include bp(xs) {
         font-size: 12px;
         left: 10px;
-        top: 10px;
+        top: 7px;
       }
       span{
         color: $main;
-        @include bp(xs) {
-          color: #000;
-        }
       }
     }
     &:focus{
@@ -220,9 +213,6 @@ main {
         }
       }
     }
-    select{
-      display: none;
-    }
     .SumoSelect{
       display: flex;
       width: 100%;
@@ -248,9 +238,10 @@ main {
         cursor: pointer;
         @include bp(xs) {
           height: 35px;
-          }
+          padding: 0 10px;
+          font-size: 12px;
+        }
         span{
-          
           color: $text;
           cursor: pointer;
           &.placeholder{
@@ -261,6 +252,9 @@ main {
           margin-bottom: 0;
           width: 44px;
           cursor: pointer;
+          @include bp(xs) {
+            width: 29px;
+          }
           >i{
             width: 8px;
             height: 8px;
@@ -273,13 +267,27 @@ main {
             -webkit-mask-size: contain;
             mask-size: contain;
             background: $text;
+            @include bp(xs) {
+              width: 7px;
+              height: 7px;
+            }
           }
         }
       }
       >.optWrapper{
+        &.isFloating{
+          position: absolute;
+          bottom: auto;
+          width: 100%;
+          max-height: unset;
+        }
         >.options{
           li{
             &.opt{
+              @include bp(xs) {
+                font-size: 12px;
+                padding: 5px 10px;
+              }
               &.disabled{
                 display: none;
               }
@@ -349,6 +357,7 @@ main {
   @include bp(xs) {
     font-size: 12px;
     padding: 10px;
+    height: 76px;
   }
   &::placeholder {
     color: $text;
@@ -390,6 +399,9 @@ textarea:-webkit-autofill:hover {
       color: $text;
       cursor: pointer;
       padding-left: 40px;
+      @include bp(xs) {
+        padding-left: 35px;
+      }
       a{
         color: $text;
         text-decoration: underline;
@@ -407,6 +419,10 @@ textarea:-webkit-autofill:hover {
         border-radius: 3px;
         left: 0;
         top: 4px;
+        @include bp(xs) {
+          width: 25px;
+          height: 25px;
+        }
       }
     }
     &:checked{
@@ -422,6 +438,12 @@ textarea:-webkit-autofill:hover {
           transform: rotate(45deg);
           top: 8px;
           left: 6px;
+          @include bp(xs) {
+            width: 9px;
+            height: 13px;
+            border-width: 3px;
+            left: 8px;
+          }
         }
       }
     }

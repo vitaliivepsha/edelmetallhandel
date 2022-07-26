@@ -1,3 +1,14 @@
+.calc-section{
+  &.show-mob{
+    .calc-wrap{
+      @include bp(xs) {
+        padding-top: 30px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 .calc-wrap{
   display: flex;
   align-items: flex-end;
@@ -6,6 +17,10 @@
   @media only screen and (max-width: 1299px) {
     flex-direction: column;
     align-items: center;
+  }
+  @include bp(xs) {
+    padding-top: 20px;
+    margin-bottom: 30px;
   }
   >.col-md-6{
     @media only screen and (max-width: 1299px) {
@@ -19,6 +34,9 @@
   @media only screen and (max-width: 1299px) {
     margin-bottom: 40px;
   }
+  @include bp(xs) {
+    margin-bottom: 0;
+  }
 }
 
 .calc-left__title{
@@ -28,6 +46,10 @@
   line-height: 100%;
   text-align: center;
   margin-bottom: 8px;
+  @include bp(xs) {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
 }
 
 .calc-left__date{
@@ -37,6 +59,10 @@
   text-align: center;
   color: $main;
   margin-bottom: 25px;
+  @include bp(xs) {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
 }
 
 .calc-left__descr{
@@ -46,6 +72,10 @@
   text-align: center;
   color: $text;
   margin-bottom: 22px;
+  @include bp(xs) {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
 }
 
 .calc-main__wrapper{
@@ -71,6 +101,9 @@
   @include bp(md) {
     font-size: 15px;
   }
+  @include bp(xs) {
+    font-size: 14px;
+  }
 }
 
 .calc-main__row{
@@ -81,6 +114,9 @@
   font-size: 14px;
   line-height: 120%;
   padding: 5px 0;
+  @include bp(xs) {
+    font-size: 12px;
+  }
   &.light{
     background-color: #F0ECE0;
   }
@@ -93,6 +129,9 @@
         line-height: 120%;
         @include bp(md) {
           font-size: 15px;
+        }
+        @include bp(xs) {
+          font-size: 14px;
         }
       }
     }
@@ -110,6 +149,9 @@
     @include bp(md) {
       font-size: 15px;
     }
+    @include bp(xs) {
+      font-size: 14px;
+    }
   }
   &.bot{
     justify-content: center;
@@ -118,20 +160,36 @@
   }
   >span{
     padding: 0 7px;
+    @include bp(xs) {
+      padding: 0 5px;
+    }
     &:first-child{
       width: 216px;
       padding-left: 25px;
       @media only screen and (max-width: 1599px) {
         padding-left: 15px;
       }
+      @include bp(xs) {
+        width: 70%;
+        min-width: 162px;
+      }
     }
     &:nth-child(2){
       width: 96px;
       min-width: 74px;
+      @include bp(xs) {
+        width: 15%;
+        min-width: 62px;
+      }
     }
     &:last-child{
       width: 88px;
       min-width: 54px;
+      @include bp(xs) {
+        width: 15%;
+        padding-right: 15px;
+        min-width: 60px;
+      }
     }
     input{
       width: 40px;
@@ -158,6 +216,9 @@
   @include bp(sm) {
     margin-top: 20px;
   }
+  @include bp(xs) {
+    margin-top: 15px;
+  }
   .calc-main__head{
     background-color: #CFCCC6;
   }
@@ -167,6 +228,9 @@
   border: 1px solid #DBD5C7;
   border-radius: 3px;
   margin-top: 20px;
+  @include bp(xs) {
+    margin-top: 15px;
+  }
 }
 
 .calc-main__footnote{
@@ -174,6 +238,10 @@
   line-height: 100%;
   font-family: $title;
   padding: 16px 16px 14px;
+  @include bp(xs) {
+    font-size: 18px;
+    padding: 13px 15px 14px;
+  }
   >div{
     width: 470px;
     max-width: 100%;
@@ -189,12 +257,20 @@
   background: #DBD5C7;
   padding: 13px 16px;
   display: flex;
+  align-items: center;
   justify-content: center;
+  @include bp(xs) {
+    padding: 6px 15px 9px;
+  }
   >span{
     margin-right: 20px;
     font-family: $title;
     font-size: 21px;
     line-height: 140%;
+    @include bp(xs) {
+      font-size: 16px;
+      margin-right: 12px;
+    }
   }
   >div{
     background: #fff;
@@ -205,6 +281,10 @@
     font-size: 21px;
     height: 35px;
     line-height: 35px;
+    @include bp(xs) {
+      min-width: 158px;
+      font-size: 16px;
+    }
   }
 }
 
@@ -226,6 +306,11 @@
   @media only screen and (max-width: 1599px) {
     padding: 34px 24px;
   }
+  @include bp(xs) {
+    width: 282px;
+    padding: 28px 15px;
+    margin: 0 auto;
+  }
   &:before{
     position: absolute;
     content: '';
@@ -237,6 +322,11 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+    @include bp(xs) {
+      width: 7px;
+      height: 7px;
+      bottom: 16px;
+    }
   }
   &:after{
     position: absolute;
@@ -247,6 +337,9 @@
     width: 1px;
     height: 65px;
     background-color: $main;
+    @include bp(xs) {
+      top: calc(100% - 16px);
+    }
   }
   >div{
     font-size: 42px;
@@ -255,6 +348,9 @@
     @include bp(xxl) {
       font-size: 38px;
     }
+    @include bp(xs) {
+      font-size: 28px;
+    }
   }
   >span{
     display: block;
@@ -262,11 +358,21 @@
     color: $main;
     font-size: 16px;
     line-height: 140%;
+    @include bp(xs) {
+      font-size: 12px;
+      margin-top: 2px;
+    }
   }
   svg{
     position: absolute;
     top: -14px;
     right: 54px;
+    @include bp(xs) {
+      width: 25px;
+      height: 25px;
+      top: 10px;
+      right: 12px;
+    }
   }
 }
 
@@ -276,12 +382,21 @@
   border: 1px solid $main;
   border-radius: 3px;
   padding: 40px 30px 32px;
+  @include bp(xs) {
+    margin-top: 30px;
+    padding: 32px 30px 34px;
+  }
   img{
     display: block;
     width: 232px;
     height: 187px;
     object-fit: contain;
     margin: 0 auto 28px;
+    @include bp(xs) {
+      width: 204px;
+      height: 165px;
+      margin-bottom: 25px;
+    }
   }
   span{
     display: block;
@@ -292,11 +407,18 @@
     line-height: 140%;
     width: 212px;
     max-width: 100%;
+    @include bp(xs) {
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
   }
   .btn{
     width: 285px;
     max-width: 100%;
     margin: 0 auto;
+    @include bp(xs) {
+      width: 240px;
+    }
   }
 }
 
@@ -310,6 +432,10 @@
   @include bp(sm) {
     margin-top: 20px;
   }
+  @include bp(xs) {
+    margin-top: 15px;
+    padding: 30px 13px;
+  }
   img{
     width: 300px;
     max-width: 100%;
@@ -322,6 +448,10 @@
   border-radius: 3px;
   margin-top: 20px;
   padding: 38px 20px 32px;
+  @include bp(xs) {
+    margin-top: 15px;
+    padding: 30px 20px;
+  }
   >div{
     font-size: 30px;
     line-height: 100%;
@@ -329,6 +459,10 @@
     color: $main;
     text-align: center;
     margin-bottom: 23px;
+    @include bp(xs) {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
   }
   >span{
     display: block;
@@ -336,16 +470,26 @@
     line-height: 140%;
     margin-bottom: 18px;
     text-align: center;
+    @include bp(xs) {
+      font-size: 12px;
+      margin-bottom: 22px;
+    }
   }
   .btn{
     width: 285px;
     max-width: 100%;
     margin: 0 auto;
+    @include bp(xs) {
+      width: 240px;
+    }
   }
 }
 
 .section-marquee{
   margin-bottom: 100px;
+  @include bp(xs) {
+    margin-bottom: 40px;
+  }
 }
 
 .marquee {
@@ -356,6 +500,10 @@
   font-size: 21px;
   line-height: 140%;
   text-transform: uppercase;
+  @include bp(xs) {
+    padding: 12px 0;
+    font-size: 16px;
+  }
   > div {
     display: inline-flex;
     width: max-content;
@@ -365,6 +513,12 @@
     svg{
       min-width: 32px;
       margin: 0 35px;
+      @include bp(xs) {
+        width: 25px;
+        min-width: 25px;
+        height: 25px;
+        margin: 0 13px;
+      }
     }
   }
 }
