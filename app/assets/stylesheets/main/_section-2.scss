@@ -28,6 +28,9 @@
   line-height: 100%;
   text-align: center;
   margin-bottom: 8px;
+  @include bp(xs) {
+    font-size: 28px;
+    }
 }
 
 .calc-left__date{
@@ -37,6 +40,9 @@
   text-align: center;
   color: $main;
   margin-bottom: 25px;
+  @include bp(xs) {
+    font-size: 12px;
+    }
 }
 
 .calc-left__descr{
@@ -46,6 +52,9 @@
   text-align: center;
   color: $text;
   margin-bottom: 22px;
+  @include bp(xs) {
+    font-size: 12px;
+  }
 }
 
 .calc-main__wrapper{
@@ -114,7 +123,9 @@
   &.bot{
     justify-content: center;
     font-style: italic;
+    font-weight: 400;
     color: $main;
+    font-family: $title;
   }
   >span{
     padding: 0 7px;
@@ -174,6 +185,9 @@
   line-height: 100%;
   font-family: $title;
   padding: 16px 16px 14px;
+  @include bp(xs) {
+    font-size: 18px;
+    }
   >div{
     width: 470px;
     max-width: 100%;
@@ -190,11 +204,18 @@
   padding: 13px 16px;
   display: flex;
   justify-content: center;
+  @include bp(xs) {
+      align-items: center;
+    }
   >span{
     margin-right: 20px;
     font-family: $title;
     font-size: 21px;
     line-height: 140%;
+    @include bp(xs) {
+      font-size: 16px;
+      white-space: nowrap;
+    }
   }
   >div{
     background: #fff;

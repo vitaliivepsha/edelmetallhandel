@@ -324,7 +324,7 @@
     & .card-item__text {
       @include bp(xs) {
         max-width: 240px;
-        }
+      }
 
     }
 
@@ -333,14 +333,14 @@
       @include bp(xs) {
         top: 10px;
         right: -27px;
-        }
+      }
 
     }
 
     & picture {
       @include bp(xs) {
         max-height: 61px;
-        }
+      }
 
     }
   }
@@ -350,7 +350,7 @@
       max-width: 185px;
       @include bp(xs) {
         max-width: 240px;
-        }
+      }
 
     }
 
@@ -360,13 +360,13 @@
       @include bp(xs) {
         top: 1px;
         right: -18px;
-        }
+      }
     }
 
     & picture {
       @include bp(xs) {
         max-height: 46px;
-        }
+      }
     }
   }
 
@@ -474,7 +474,7 @@
   }
 
   & .main-form .form-row.two-inputs.sm .input-wrapper + .input-wrapper {
-    width: calc(23% - 13px);
+    width: calc(23% - 15px);
     @include bp(xs) {
       width: calc(35% - 12px);
     }
@@ -656,7 +656,6 @@
   }
 
   & i {
-
     & svg {
       @include bp(xs) {
         width: 25px;
