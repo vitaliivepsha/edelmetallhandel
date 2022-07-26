@@ -194,7 +194,15 @@ main {
       .SumoSelect{
         >.CaptionCont{
           span{
+            font-size: 16px;
+            @include bp(xs) {
+              font-size: 12px;
+            }
             &.placeholder{
+              font-size: 16px;
+             @include bp(xs) {
+               font-size: 12px;
+               }
               &:after{
                 content: ' *';
                 color: $main;
@@ -223,7 +231,7 @@ main {
       }
       &.open{
         >.optWrapper{
-          top: 100%;
+          top: calc(100% + 1px);
         }
       }
       >.CaptionCont{
@@ -531,4 +539,5 @@ textarea:-webkit-autofill:hover {
 @import "impresum";
 @import "privacy";
 @import "product";
+@import "shipping";
 

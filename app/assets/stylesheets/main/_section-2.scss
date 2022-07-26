@@ -18,10 +18,6 @@
     flex-direction: column;
     align-items: center;
   }
-  @include bp(xs) {
-    padding-top: 20px;
-    margin-bottom: 30px;
-  }
   >.col-md-6{
     @media only screen and (max-width: 1299px) {
       width: 840px;
@@ -157,6 +153,7 @@
     justify-content: center;
     font-style: italic;
     color: $main;
+    font-family: $title;
   }
   >span{
     padding: 0 7px;

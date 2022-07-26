@@ -2,6 +2,9 @@
   min-height: 470px;
   padding-top: 10px;
   padding-bottom: 79px;
+  @include bp(xs) {
+    padding-bottom: 39px;
+  }
 
   & .row {
     display: flex;
@@ -11,7 +14,6 @@
 }
 
 .product-buying__desc {
-
   max-width: 654px;
   min-height: 470px;
   @include bp(lg) {
@@ -21,11 +23,11 @@
     margin-bottom: 60px;
     @include bp(xs) {
       margin-bottom: 72px;
-      }
+    }
   }
 
   &:after {
-      content: "";
+    content: "";
     display: none;
     position: absolute;
     bottom: -29px;
@@ -49,7 +51,7 @@
     color: $text;
     @include bp(xs) {
       font-size: 12px;
-      }
+    }
 
     & + p {
       margin-top: 7px;
@@ -94,10 +96,30 @@
     min-height: auto;
   }
 
+
   & + .product-buying__inner {
+    position: relative;
     @include bp(lg) {
       margin-top: 50px;
     }
+    @include bp(xs) {
+      margin-top: 76px;
+    }
+
+    &:after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: -40px;
+      right: -15px;
+      left: -15px;
+      height: 1px;
+      background-color: #D9D9D9;
+      @include bp(xs) {
+        display: block;
+      }
+    }
+
   }
 
   & a {
@@ -116,7 +138,7 @@
   width: 100%;
   max-width: 400px;
   margin-bottom: 10px;
-  margin-top: auto;
+  margin-top: unset;
   @include bp(lg) {
     margin-bottom: 40px;
   }
@@ -124,8 +146,9 @@
     height: unset;
   }
   @include bp(xs) {
+    margin-bottom: 28px;
     padding: 0 36px;
-    }
+  }
 
   & picture {
     width: 100%;
@@ -147,6 +170,10 @@
   background-color: #E4E4E4;
   @include bp(md) {
     padding: 38px 0;
+  }
+  @include bp(xs) {
+    padding: 50px 0;
+    padding-bottom: 0;
   }
 
   & .row {
@@ -175,6 +202,9 @@
   @include bp(sm) {
     max-width: 661px;
   }
+  @include bp(xs) {
+    margin-bottom: 15px;
+  }
 
   & > span {
     display: block;
@@ -187,6 +217,11 @@
     font-size: 42px;
     line-height: 100%;
     text-align: center;
+    @include bp(xs) {
+      max-width: 240px;
+      margin-bottom: 13px;
+      font-size: 24px;
+    }
   }
 
   & > small {
@@ -199,6 +234,9 @@
     line-height: 140%;
     text-align: center;
     color: $main;
+    @include bp(xs) {
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -227,43 +265,108 @@
     padding: 72px 30px 30px 30px;
   }
   @include bp(xs) {
-    padding: 73px 55px 30px 55px;
+    min-height: 200px;
+    padding: 52px 25px 20px 25px;
   }
 
 
   &:nth-child(1) {
+    & .card-item__text {
+      max-width: 216px;
+      @include bp(xs) {
+        max-width: 220px;
+      }
+    }
+
     & .card-item__pic {
-      top: 29px;
-      right: 2px;
+      top: 27px;
+      @include bp(xs) {
+        top: 6px;
+        right: -17px;
+      }
 
       & picture {
-        max-height: 66px;
+        @include bp(xs) {
+          max-height: 47px;
+        }
+
       }
     }
   }
 
   &:nth-child(2) {
+    & .card-item__text {
+      max-width: 200px;
+      @include bp(xs) {
+        max-width: 200px;
+      }
+    }
+
     & .card-item__pic {
-      top: 30px;
-      right: 13px;
+      top: 31px;
+      right: 9px;
+      @include bp(xs) {
+        top: 8px;
+        right: -8px;
+      }
 
       & picture {
-        max-height: 40px;
+        width: 170px;
+        @include bp(xs) {
+          max-height: 42px;
+        }
+
       }
     }
   }
 
   &:nth-child(3) {
+    & .card-item__text {
+      @include bp(xs) {
+        max-width: 240px;
+      }
+
+    }
+
     & .card-item__pic {
-      top: 16px;
-      right: -21px;
+      right: -20px;
+      @include bp(xs) {
+        top: 10px;
+        right: -27px;
+      }
+
+    }
+
+    & picture {
+      @include bp(xs) {
+        max-height: 61px;
+      }
+
     }
   }
 
   &:nth-child(4) {
+    & .card-item__text {
+      max-width: 185px;
+      @include bp(xs) {
+        max-width: 240px;
+      }
+
+    }
+
     & .card-item__pic {
       top: 23px;
-      right: -5px;
+      right: -3px;
+      @include bp(xs) {
+        top: 1px;
+        right: -18px;
+      }
+    }
+
+    & picture {
+      @include bp(xs) {
+        max-height: 46px;
+      }
     }
   }
 
@@ -276,10 +379,11 @@
     line-height: 100%;
     color: $main;
     text-align: left;
+
   }
 
   & .card-item__text {
-    max-width: 192px;
+    max-width: 220px;
     margin: 0;
     font-weight: 400;
     font-size: 16px;
@@ -328,12 +432,15 @@
     padding: 31px 80px 50px;
     @media (min-width: 1199px) and (max-width: 1441px) {
       padding: 31px 32px 50px;
-    }
 
+    }
     @include bp(sm) {
       width: 100%;
-
       padding: 31px 32px 50px;
+    }
+    @include bp(xs) {
+      margin-bottom: 40px;
+      padding: 25px 10px 34px;
     }
 
     & .order-title {
@@ -342,6 +449,12 @@
       font-size: 30px;
       line-height: 100%;
       text-align: center;
+      @include bp(xs) {
+        margin: 0 auto;
+        margin-bottom: 28px;
+        max-width: 260px;
+        font-size: 24px;
+      }
     }
   }
 
@@ -355,10 +468,16 @@
 
   & .main-form .form-row.two-inputs.sm .input-wrapper {
     width: calc(78% - 3px);
+    @include bp(xs) {
+      width: calc(67% - 3px);
+    }
   }
 
   & .main-form .form-row.two-inputs.sm .input-wrapper + .input-wrapper {
-    width: calc(23% - 13px);
+    width: calc(23% - 15px);
+    @include bp(xs) {
+      width: calc(35% - 12px);
+    }
   }
 
   .order-form .main-form .checkbox-wrapper {
@@ -368,13 +487,50 @@
 
   & .order-form .main-form .form-footer {
     @include bp(xs) {
+      margin-top: -8px;
       justify-content: center;
       flex-direction: column;
     }
   }
 
+  & .form-footer .checkbox-wrapper {
+    @include bp(xs) {
+      padding-right: 0;
+    }
+  }
+
+  & .checkbox-wrapper input + label {
+    @include bp(xs) {
+      padding-left: 34px;
+      padding-top: 3px;
+    }
+  }
+
+  & .checkbox-wrapper input + label:before {
+    @include bp(xs) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  & .checkbox-wrapper input:checked + label:after {
+    @include bp(xs) {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  & .form-row .textarea {
+    @include bp(xs) {
+      height: 76px;
+    }
+  }
+
   & .main-form .btn {
     width: 70%;
+    @include bp(xs) {
+      width: 100%;
+    }
   }
 }
 
@@ -387,6 +543,10 @@
     @include bp(sm) {
       display: block;
     }
+    @include bp(xs) {
+      padding-bottom: 50px;
+      padding-top: 54px;
+    }
   }
 
   & .tips-item {
@@ -395,11 +555,49 @@
       max-width: 540px;
       margin: 0 auto;
     }
+    @include bp(xs) {
+      min-height: 100%;
+      padding: 51px 40px 45px 15px;
+    }
+
+    & > i {
+      @include bp(xs) {
+        left: 15px;
+        width: 55px;
+        height: 55px;
+      }
+
+      & svg {
+        @include bp(xs) {
+          width: 30px;
+        }
+      }
+    }
 
     & + .tips-item {
-
       @include bp(sm) {
         margin-top: 40px;
+      }
+
+      & > i {
+        @include bp(xs) {
+          width: 55px;
+          height: 55px;
+        }
+
+        & svg {
+          @include bp(xs) {
+            width: 17px;
+          }
+        }
+      }
+
+    }
+
+    & > span {
+      @include bp(xs) {
+        margin-bottom: 11px;
+        font-size: 16px;
       }
     }
 
@@ -410,6 +608,9 @@
       font-size: 16px;
       line-height: 140%;
       color: $text;
+      @include bp(xs) {
+        font-size: 12px;
+      }
 
       &:before {
         content: "";
@@ -422,6 +623,10 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 20px 12px;
+        @include bp(xs) {
+          left: -1px;
+          top: -4px;
+        }
       }
 
     }
@@ -434,24 +639,35 @@
   padding-top: 108px;
   padding-bottom: 96px;
   background-color: #E4E4E4;
+  @include bp(xs) {
+    padding-top: 33px;
+    padding-bottom: 35px;
+  }
 }
 
 .product-text__wrapper {
   max-width: 1100px;
   margin: 0 auto;
-}
-
-.product-text__wrapper {
   columns: 2;
   column-width: 500px;
-  column-gap: 30px;
+  column-gap: 70px;
   @include bp(lg) {
     column-width: 340px;
+  }
+
+  & i {
+    & svg {
+      @include bp(xs) {
+        width: 25px;
+        height: 25px;
+      }
+    }
   }
 
   & i ~ i {
     display: block;
     margin-top: 30px;
+
   }
 
   & span {
@@ -463,6 +679,10 @@
     font-size: 21px;
     line-height: 100%;
     color: $main;
+    @include bp(xs) {
+      margin-top: 11px;
+      font-size: 16px;
+    }
   }
 
   & p {
@@ -471,9 +691,15 @@
     font-size: 16px;
     line-height: 140%;
     color: $text;
+    @include bp(xs) {
+      font-size: 12px;
+    }
 
     & + p {
       margin-top: 6px;
+      @include bp(xs) {
+        margin-top: 9px;
+      }
     }
   }
 }
@@ -482,18 +708,21 @@
 
 .product-consult {
   padding: 90px 0;
+  @include bp(xs) {
+    padding: 50px 0;
+  }
 
   & .main-form .checkbox-wrapper {
     max-width: 454px;
   }
 
   & .form-row.two-inputs.lg .input-wrapper {
-    width: calc(55% - 5px);
+    width: calc(50% - 5px);
 
   }
 
   & .form-row.two-inputs.lg .input-wrapper + .input-wrapper {
-    width: calc(45% - 5px);
+    width: calc(50% - 5px);
   }
 
 }
@@ -512,6 +741,62 @@
   @include bp(md) {
     padding: 30px 40px 30px 40px;
   }
+  @include bp(xs) {
+    padding: 34px 9px 43px 9px;
+  }
+
+  .order-form .main-form .checkbox-wrapper {
+    margin-top: 4px;
+    max-width: 400px;
+  }
+
+  & .order-form .main-form .form-footer {
+    @include bp(xs) {
+      margin-top: 23px;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  & .form-footer .checkbox-wrapper {
+    @include bp(xs) {
+      padding-right: 0;
+    }
+  }
+
+  & .checkbox-wrapper input + label {
+    @include bp(xs) {
+      padding-left: 34px;
+      padding-top: 3px;
+    }
+  }
+
+  & .checkbox-wrapper input + label:before {
+    @include bp(xs) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  & .checkbox-wrapper input:checked + label:after {
+    @include bp(xs) {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  & .form-row .textarea {
+    @include bp(xs) {
+      height: 76px;
+    }
+  }
+
+  & .main-form .btn {
+    width: 70%;
+    @include bp(xs) {
+      width: 100%;
+    }
+  }
 
 }
 
@@ -524,6 +809,10 @@
   line-height: 100%;
   text-align: center;
   color: #000000;
+  @include bp(xs) {
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
 }
 
 .consult-form__subtitle {
@@ -534,6 +823,9 @@
   line-height: 140%;
   text-align: center;
   color: #CC950C;
+  @include bp(xs) {
+    font-size: 12px;
+  }
 }
 
 .form-note {
@@ -544,6 +836,11 @@
   line-height: 140%;
   text-align: right;
   color: $main;
+  @include bp(xs) {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
 }
 
 // ======== block ========
@@ -553,6 +850,10 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 18px;
+  @include bp(xs) {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
 
   & i {
     display: flex;
@@ -560,6 +861,17 @@
     align-items: center;
     width: 23px;
     height: 23px;
+    @include bp(xs) {
+      width: 14px;
+      height: 14px;
+    }
+
+    & svg {
+      @include bp(xs) {
+        width: 12px;
+        height: 14px;
+      }
+    }
   }
 
   & span {
@@ -567,6 +879,10 @@
     font-size: 16px;
     line-height: 140%;
     color: #464646;
+    @include bp(xs) {
+      padding-top: 3px;
+      font-size: 12px;
+    }
   }
 }
 
@@ -600,6 +916,9 @@
     color: #464646;
     cursor: pointer;
     transition: color linear 0.2s, border linear 0.2s;
+    @include bp(xs) {
+      height: 35px;
+    }
 
     &:hover {
       color: $main;
@@ -635,6 +954,9 @@
     border-radius: 3px;
     white-space: nowrap;
     transition: opacity linear 0.2s;
+    @include bp(xs) {
+      height: 35px;
+    }
 
     & span {
       font-weight: 400;

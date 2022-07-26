@@ -12,6 +12,10 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/impresum.html');
     require('./assets/templates/layouts/privacy.html');
     require('./assets/templates/layouts/product-diamonds.html');
+    require('./assets/templates/layouts/product-luxusuhren.html');
+    require('./assets/templates/layouts/product-muenzen.html');
+    require('./assets/templates/layouts/product-schmuck.html');
+    require('./assets/templates/layouts/shipping.html');
 }
 
 // Depends
@@ -94,8 +98,6 @@ $(function () {
 
     // upload file
 
-
-
     $(document).delegate("#upload-files", "change", function () {
         var files = $("#upload-files")[0].files;
         for (var i = 0; i < files.length; i++) {
@@ -118,21 +120,6 @@ $(function () {
         $(this).closest(".file").remove();
         $(this).remove();
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     // mobile menu
