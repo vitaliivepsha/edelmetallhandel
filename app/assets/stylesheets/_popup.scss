@@ -12,6 +12,7 @@
 .mfp-container {
 }
 
+
 .popup {
   position: relative;
   margin: 0 auto;
@@ -20,9 +21,11 @@
   padding: 49px 63px 68px 63px;
   background: #FFFFFF;
   border-radius: 3px;
+
   @include bp(sm) {
     padding: 41px 40px 53px 40px;
   }
+
   @include bp(xs) {
     padding: 45px 11px 47px 9px;
   }
@@ -31,9 +34,11 @@
     width: 72px;
     height: 70px;
     opacity: 1;
+
     &:hover {
       opacity: 0.7;
     }
+
     @include bp(sm) {
       width: 52px;
       height: 50px;
@@ -43,6 +48,7 @@
 
     svg {
       pointer-events: none;
+
       @include bp(xs) {
         width: 10px;
         height: 10px;
@@ -51,7 +57,86 @@
   }
 }
 
-.swal2-container.swal2-shown{
+.investment-popup {
+  & .consult-form__title {
+    @include bp(xs) {
+      margin-bottom: 5px;
+    }
+  }
+
+  & .consult-form__subtitle {
+    margin-bottom: 24px;
+
+    @include bp(xs) {
+      margin-bottom: 16px;
+    }
+  }
+
+  & .main-form .form-row.two-inputs {
+    @include bp(xs) {
+      flex-wrap: wrap;
+    }
+  }
+
+  & .main-form .form-row.two-inputs.lg .input-wrapper {
+    width: calc(51% - 1px);
+
+    @include bp(xs) {
+      width: calc(49% - 1px);
+    }
+  }
+
+  & .main-form .form-row.two-inputs.lg .input-wrapper + .input-wrapper {
+    width: calc(48% - 1px);
+  }
+
+  & .main-form .form-row.two-inputs.lg.lg--w100 .input-wrapper {
+    @include bp(xs) {
+      width: 100%;
+    }
+  }
+
+  & .textarea {
+    height: 60px;
+  }
+
+  & .checkbox-wrapper input:checked + label:after {
+    @include bp(xs) {
+      top: 4px;
+      }
+
+  }
+
+  & .main-form .form-footer {
+    margin-top: 20px;
+  }
+
+
+  & .checkbox-wrapper input + label {
+    @include bp(xs) {
+      padding-left: 41px;
+    }
+  }
+
+  & .checkbox-wrapper input + label:before {
+    @include bp(xs) {
+      top: 0px;
+    }
+  }
+
+  & .form-note {
+    @include bp(xs) {
+      display: none;
+    }
+  }
+
+  & .main-form .checkbox-wrapper {
+    max-width: 461px;
+  }
+
+}
+
+.swal2-container.swal2-shown {
   background: rgba($main, 0.4);
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
@@ -65,7 +150,8 @@
   border-radius: 0;
   color: #fff;
   padding: 60px !important;
-  @include bp(xs){
+
+  @include bp(xs) {
     padding: 35px 15px 40px !important;
 
   }
@@ -74,7 +160,7 @@
     display: none !important;
   }
 
-  .swal2-title{
+  .swal2-title {
     font-family: $title;
     font-weight: 600;
     font-size: 42px;
@@ -83,7 +169,8 @@
     margin-bottom: 30px;
     text-align: center;
     color: #000;
-    @include bp(xs){
+
+    @include bp(xs) {
       font-size: 28px;
       margin-bottom: 20px;
     }
@@ -99,6 +186,7 @@
 
   .swal2-buttonswrapper {
     margin-top: 45px;
+
     @include bp(xs) {
       margin-top: 25px;
     }
@@ -120,12 +208,14 @@
     outline: none !important;
     box-shadow: none !important;
     transition: linear 0.2s;
-    @include bp(xs){
+
+    @include bp(xs) {
       width: 190px;
       height: 50px;
       font-size: 16px;
     }
-    &:hover{
+
+    &:hover {
       color: $main;
       background-color: transparent !important;
     }

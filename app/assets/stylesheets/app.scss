@@ -179,7 +179,7 @@ main {
       @include bp(xs) {
         font-size: 12px;
         left: 10px;
-        top: 7px;
+        top: 10px;
       }
       span{
         color: $main;
@@ -482,7 +482,7 @@ textarea:-webkit-autofill:hover {
   @include bp(xs) {
     font-size: 12px;
     padding: 5px 9px;
-    top: 2px;
+    top: 5px;
   }
 }
 
