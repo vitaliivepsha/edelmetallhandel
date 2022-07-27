@@ -194,9 +194,12 @@
     margin-bottom: 15px;
     padding: 35px 10px 30px;
   }
-  .main-form{
+  & .main-form{
     width: 800px;
     max-width: 100%;
+    @include bp(lg) {
+      width: 100%;
+      }
     .form-upload{
       margin-top: 25px;
       @include bp(xs) {
