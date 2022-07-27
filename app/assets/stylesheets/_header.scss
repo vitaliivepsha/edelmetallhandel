@@ -10,6 +10,9 @@
   @include bp(md) {
     box-shadow: 0 0 20px rgba(70, 70, 70, 0.2);
   }
+  /*&.top{
+    top: -200px;
+  }*/
   &.fixed {
     .header-main{
       height: 100px;

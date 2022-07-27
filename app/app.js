@@ -60,6 +60,11 @@ $(function () {
         } else {
             header.removeClass('fixed');
         }
+        /*if (scrolled > 200 && scrolled > scrollPrev) {
+            header.addClass('top');
+        } else {
+            header.removeClass('top');
+        }*/
         scrollPrev = scrolled;
     });
 
