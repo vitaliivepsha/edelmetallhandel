@@ -439,17 +439,18 @@ textarea:-webkit-autofill:hover {
           position: absolute;
           content: '';
           width: 6px;
-          height: 9px;
+          height: 10px;
           border: 2px solid $main;
           border-left: none;
           border-top: none;
           transform: rotate(45deg);
-          top: 8px;
-          left: 6px;
+          top: 7px;
+          left: 7px;
           @include bp(xs) {
             width: 9px;
             height: 13px;
             border-width: 3px;
+            top: 8px;
             left: 8px;
           }
         }
