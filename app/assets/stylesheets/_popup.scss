@@ -97,7 +97,10 @@
   }
 
   & .textarea {
-    height: 60px;
+    height: 140px;
+    @include bp(xs) {
+      height: 60px;
+    }
   }
 
   & .checkbox-wrapper input:checked + label:after {
