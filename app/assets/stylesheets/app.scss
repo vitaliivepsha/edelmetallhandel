@@ -158,6 +158,12 @@ main {
         visibility: hidden;
       }
     }
+    .textarea{
+      +label{
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
   }
   .input, .textarea{
     +label{

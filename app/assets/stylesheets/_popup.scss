@@ -30,6 +30,10 @@
   .mfp-close {
     width: 72px;
     height: 70px;
+    opacity: 1;
+    &:hover {
+      opacity: 0.7;
+    }
     @include bp(sm) {
       width: 52px;
       height: 50px;
@@ -47,123 +51,50 @@
   }
 }
 
-.investment-popup {
-  & .consult-form__title {
-    @include bp(xs) {
-      margin-bottom: 5px;
-    }
-  }
-
-  & .consult-form__subtitle {
-    margin-bottom: 24px;
-    @include bp(xs) {
-      margin-bottom: 16px;
-    }
-  }
-
-  & .main-form .form-row.two-inputs {
-    @include bp(xs) {
-      flex-wrap: wrap;
-    }
-  }
-
-  & .main-form .form-row.two-inputs.lg .input-wrapper {
-    width: calc(51% - 1px);
-    @include bp(xs) {
-      width: calc(49% - 1px);
-    }
-  }
-
-  & .main-form .form-row.two-inputs.lg .input-wrapper + .input-wrapper {
-    width: calc(48% - 1px);
-  }
-
-  & .main-form .form-row.two-inputs.lg.lg--w100 .input-wrapper {
-    @include bp(xs) {
-      width: 100%;
-    }
-  }
-
-  & .textarea {
-    height: 60px;
-  }
-
-  & .main-form .form-footer {
-    margin-top: 20px;
-  }
-
-
-  & .checkbox-wrapper input + label {
-      @include bp(xs) {
-        padding-left: 41px;
-        }
-  }
-
-  & .checkbox-wrapper input + label:before {
-      @include bp(xs) {
-        top: 0px;
-        }
-  }
-
-  & .form-note {
-    @include bp(xs) {
-      display: none;
-    }
-  }
-
-  & .main-form .checkbox-wrapper {
-    max-width: 461px;
-  }
-
-}
-
-.swal2-container.swal2-shown {
-  background: rgba(0, 49, 116, 0.5);
-  backdrop-filter: blur(10px);
-  z-index: 10005;
+.swal2-container.swal2-shown{
+  background: rgba($main, 0.4);
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  z-index: 10006;
 }
 
 .swal2-modal {
   background-color: #fff !important;
-  width: 730px !important;
+  width: 540px !important;
   max-width: calc(100vw - 30px);
   border-radius: 0;
   color: #fff;
-  padding: 60px 60px 110px !important;
-  @include bp(sm) {
-    padding: 60px 30px 80px !important;
-  }
-  @include bp(xs) {
-    padding: 40px 15px 80px !important;
+  padding: 60px !important;
+  @include bp(xs){
+    padding: 35px 15px 40px !important;
+
   }
 
   .swal2-icon {
     display: none !important;
   }
 
-  .swal2-title {
-    font-family: $default;
+  .swal2-title{
+    font-family: $title;
     font-weight: 600;
-    font-size: 36px;
-    line-height: 44px;
-    text-transform: uppercase;
+    font-size: 42px;
+    line-height: 100%;
     display: block;
-    margin-bottom: 42px;
+    margin-bottom: 30px;
     text-align: center;
-    color: #fff;
-    @include bp(xs) {
-      font-size: 18px;
-      line-height: 22px;
-      margin-bottom: 28px;
+    color: #000;
+    @include bp(xs){
+      font-size: 28px;
+      margin-bottom: 20px;
     }
   }
 
   .swal2-content {
     font-family: $default;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 16px;
+    line-height: 140%;
     text-align: center;
-    color: #fff;
+    color: $text;
   }
 
   .swal2-buttonswrapper {
@@ -176,26 +107,27 @@
   .swal2-styled {
     margin: 0 auto;
     width: 220px;
-    height: 50px;
+    height: 60px;
     font-family: $default;
-    font-size: 16px;
-    line-height: 19px;
+    text-transform: uppercase;
+    font-size: 21px;
+    line-height: 140%;
     color: #fff;
     border: 1px solid;
-    border-color: #fff !important;
-    background-color: transparent !important;
+    border-color: $main !important;
+    background-color: $main !important;
     border-radius: 30px;
     outline: none !important;
     box-shadow: none !important;
-    @include bp(xs) {
-      height: 40px;
-      width: 174px;
-      font-size: 14px;
-      line-height: 17px;
+    transition: linear 0.2s;
+    @include bp(xs){
+      width: 190px;
+      height: 50px;
+      font-size: 16px;
     }
-
-    &:hover {
-      background-color: #fff !important;
+    &:hover{
+      color: $main;
+      background-color: transparent !important;
     }
   }
 }
