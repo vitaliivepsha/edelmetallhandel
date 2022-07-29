@@ -47,9 +47,17 @@
   height: 32.3vw;
   min-height: 515px;
   max-height: 720px;
+  @media only screen and (max-height: 1179px) {
+    height: calc(100vh - 380px);
+    min-height: calc(100vh - 380px);
+  }
   @media only screen and (max-height: 859px) {
     height: calc(100vh - 300px);
     min-height: calc(100vh - 300px);
+  }
+  @media only screen and (max-height: 659px) {
+    min-height: 515px;
+    max-height: 720px;
   }
   @include bp(xs) {
     height: 119vw;
@@ -360,10 +368,28 @@
       @media only screen and (max-height: 859px) {
         height: 46px;
       }
+      @include bp(xs) {
+        height: 35px;
+      }
     }
     .textarea{
       @media only screen and (max-height: 859px) {
         height: 100px;
+      }
+      @include bp(xs) {
+        height: 76px;
+      }
+    }
+    &.select-wrapper{
+      .SumoSelect{
+        > .CaptionCont{
+          @media only screen and (max-height: 859px) {
+            height: 46px;
+          }
+          @include bp(xs) {
+            height: 35px;
+          }
+        }
       }
     }
   }

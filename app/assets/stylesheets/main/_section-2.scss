@@ -14,6 +14,9 @@
   align-items: flex-end;
   padding-top: 62px;
   margin-bottom: 100px;
+  @include bp(xs) {
+    margin-bottom: 30px;
+  }
   @media only screen and (max-width: 1299px) {
     flex-direction: column;
     align-items: center;
