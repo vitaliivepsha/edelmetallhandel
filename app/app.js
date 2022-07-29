@@ -55,16 +55,17 @@ $(function () {
     $(window).scroll(function () {
         var scrolled = $(window).scrollTop();
 
-        if (scrolled > 0) {
+        if (scrolled > 200 && scrolled > scrollPrev) {
+            header.addClass('top');
+        }
+        else {
+            header.removeClass('top');
+        };
+        if (scrolled > 200) {
             header.addClass('fixed');
         } else {
             header.removeClass('fixed');
         }
-        /*if (scrolled > 200 && scrolled > scrollPrev) {
-            header.addClass('top');
-        } else {
-            header.removeClass('top');
-        }*/
         scrollPrev = scrolled;
     });
 

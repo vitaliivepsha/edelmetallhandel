@@ -19,9 +19,22 @@
     align-items: center;
   }
   >.col-md-6{
+    @media only screen and (max-width: 1499px) {
+      min-width: 57%;
+    }
     @media only screen and (max-width: 1299px) {
+      min-width: unset;
       width: 840px;
       max-width: 100%;
+    }
+    +.col-md-6{
+      @media only screen and (max-width: 1499px) {
+        min-width: unset;
+        max-width: 43%;
+      }
+      @media only screen and (max-width: 1299px) {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -116,9 +129,23 @@
   &.light{
     background-color: #F0ECE0;
   }
+  &.last{
+    /*@media only screen and (max-width: 1499px) {
+      min-height: 50px;
+    }
+    @media only screen and (max-width: 1299px) {
+      min-height: unset;
+    }*/
+  }
   &.medium{
     background-color: #DBD5C7;
     color: #000;
+    /*@media only screen and (max-width: 1499px) {
+      min-height: 50px;
+    }
+    @media only screen and (max-width: 1299px) {
+      min-height: unset;
+    }*/
     >span{
       &:first-child{
         font-size: 16px;
@@ -151,9 +178,8 @@
   }
   &.bot{
     justify-content: center;
-    font-style: italic;
+    font-family: $italic;
     color: $main;
-    font-family: $title;
   }
   >span{
     padding: 0 7px;
@@ -342,8 +368,8 @@
     font-size: 42px;
     line-height: 100%;
     font-family: $title;
-    @include bp(xxl) {
-      font-size: 38px;
+    @media only screen and (max-width: 1499px) {
+      font-size: 32px;
     }
     @include bp(xs) {
       font-size: 28px;
@@ -364,6 +390,14 @@
     position: absolute;
     top: -14px;
     right: 54px;
+    @media only screen and (max-width: 1499px) {
+      top: -20px;
+      right: 40px;
+    }
+    @media only screen and (max-width: 1299px) {
+      top: -14px;
+      right: 54px;
+    }
     @include bp(xs) {
       width: 25px;
       height: 25px;
@@ -480,6 +514,9 @@
     color: $main;
     text-align: center;
     margin-bottom: 23px;
+    @media only screen and (max-width: 1499px) {
+      font-size: 26px;
+    }
     @include bp(xs) {
       font-size: 24px;
       margin-bottom: 6px;
