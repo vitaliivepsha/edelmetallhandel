@@ -57,9 +57,11 @@ $(function () {
 
         if (scrolled > 200 && scrolled > scrollPrev) {
             header.addClass('top');
+            $('body').addClass('hidden-header');
         }
         else {
             header.removeClass('top');
+            $('body').removeClass('hidden-header');
         };
         if (scrolled > 200) {
             header.addClass('fixed');

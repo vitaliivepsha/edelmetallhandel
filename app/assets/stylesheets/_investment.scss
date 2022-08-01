@@ -283,6 +283,7 @@
   width: 400px;
   position: sticky;
   top: 170px;
+  transition: linear .3s;
   @media only screen and (max-width: 1699px) {
     width: 300px;
   }

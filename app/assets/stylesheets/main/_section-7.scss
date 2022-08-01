@@ -99,6 +99,14 @@
     p{
       margin-bottom: 0;
     }
+    a{
+      color: $text;
+      text-decoration: underline;
+      &:hover{
+        color: $main;
+        text-decoration: none;
+      }
+    }
   }
 }
 

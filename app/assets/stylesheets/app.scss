@@ -28,6 +28,14 @@ body {
       display: block;
     }
   }
+  &.hidden-header{
+    .investment-chart{
+      top: 20px;
+      @include bp(md) {
+        top: 20px;
+      }
+    }
+  }
 }
 
 ol,
