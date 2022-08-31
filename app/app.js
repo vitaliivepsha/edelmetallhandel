@@ -47,6 +47,22 @@ $(function () {
         $(window).trigger('resize');
     }, 100);
 
+    // scroll to id
+
+    $(document).on("click", 'a[href^="#"]', function (e) {
+        var id = $(this).attr("href");
+        var $id = $(id);
+        if ($id.length === 0) {
+            return;
+        }
+        e.preventDefault();
+        var pos = $id.offset().top;
+        $("body, html").animate({ scrollTop: pos }, 500);
+    });
+    $(document).on("click", 'a[href^="#"]', function (e) {
+        e.preventDefault();
+    });
+
     // fixed header
 
     var header = $('.header'),
