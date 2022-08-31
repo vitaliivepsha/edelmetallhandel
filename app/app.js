@@ -49,7 +49,7 @@ $(function () {
 
     // scroll to id
 
-    $(document).on("click", 'a[href^="#"]', function (e) {
+    $(document).on("click", 'a[href*="#"]', function (e) {
         var id = $(this).attr("href");
         var $id = $(id);
         if ($id.length === 0) {
@@ -59,7 +59,7 @@ $(function () {
         var pos = $id.offset().top;
         $("body, html").animate({ scrollTop: pos }, 500);
     });
-    $(document).on("click", 'a[href^="#"]', function (e) {
+    $(document).on("click", 'a[href*="#"]', function (e) {
         e.preventDefault();
     });
 
