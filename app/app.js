@@ -294,4 +294,68 @@ $(function () {
             });
         }
     });
+
+    // main form
+    $('.first-step__form input.required').each(function() {
+        var input = $(this);
+        var data_error = $(this).data('validate-required');
+        var input_wrapper = $(this).parent();
+        /*$('.first-step__form .btn').click(function() {
+            if(!input.val()) {
+                $(this).parent().addClass('err');
+            }
+        });*/
+        $('.first-step__form').on('submit', function(e){
+            var name_data_val = $(this).find('input[name="name"]').val();
+            var tel_data_val = $(this).find('input[name="telefon"]').val();
+            console.log(tel_data_val);
+            e.preventDefault();
+            if ($.trim(input.val()) === '') {
+                input_wrapper.addClass('err').append('<div class="validate-error"><div class=""><div><i></i>' + data_error + '</div></div></div>');
+            }
+            else if($('.input-wrapper.err').length){
+                return false;
+            }
+            else {
+                $.ajax({
+                    success: function () {
+                        $('.main-form__step.step1').hide();
+                        $('.main-form__step.step2').show();
+                    }
+                });
+                $('.second-step__form').find('input[name="name"]').val(name_data_val).parent().addClass('filled');
+                $('.second-step__form').find('input[name="telefon"]').val(tel_data_val).parent().addClass('filled');
+            }
+        });
+    });
+    $('.first-step__form input.required').click(function() {
+        $(this).parent().removeClass('err').find('.validate-error').remove();
+    });
+    $('.first-step__form input.required').keyup(function() {
+        if ($(this).val() == '') {
+            $(this).parent().removeClass('filled');
+        }
+        else{
+            $(this).parent().addClass('filled');
+        }
+    });
+
+    // comeback popup
+
+    $('#comeback-trigger').mouseover(function() {
+        if ($(window).width() > 480) {
+            //if (typeof $.cookie('exit') === 'undefined') {
+                $.magnificPopup.open(
+                    {
+                        items: {
+                            src: '#comeback'
+                        },
+                        type: 'inline'
+                    },
+                    0
+                );
+                $.cookie('exit', 1, { expires: 1 });
+            //}
+        }
+    });
 });

@@ -422,3 +422,81 @@
     }
   }
 }
+
+.main-right__contacts{
+  margin-top: 40px;
+}
+
+.main-right__call{
+  margin: -10px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (max-height: 759px){
+    margin-top: 20px;
+  }
+  a{
+    font-size: 22px;
+    svg{
+      width: 26px;
+      height: 26px;
+      position: relative;
+      top: 1px;
+    }
+    &:first-child{
+      margin-right: 10px;
+    }
+    &:hover{
+      svg{
+        path{
+          fill: $accent;
+        }
+      }
+    }
+  }
+}
+
+.main-form__steps-nav{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 15px;
+  span{
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid $border;
+    width: 43px;
+    height: 43px;
+    color: $border;
+    font-size: 16px;
+    line-height: 140%;
+    margin-right: 20px;
+    &.current{
+      background-color: $border;
+      color: #fff;
+    }
+    &.prev{
+      border-color: $main;
+      background-color: $main;
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 1px;
+      background-color: $border;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:last-child{
+      margin-right: 0;
+      &:after{
+        display: none;
+      }
+    }
+  }
+}
