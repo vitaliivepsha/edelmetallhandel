@@ -1001,14 +1001,145 @@
 
 }
 
+// new first screen
 
+.product-top__screen{
+  padding-bottom: 60px;
+  @include bp(xs) {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .product-buying__desc{
+    @include bp(xs) {
+      margin-bottom: 30px;
+    }
+    &:after{
+      @include bp(xs) {
+        display: none;
+      }
+    }
+  }
+}
 
+.product-top__main{
+  position: relative;
+  height: 490px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  @media only screen and (min-width: 1921px){
+    height: 24vw;
+  }
+  @include bp(lg) {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  >picture{
+    position: absolute;
+    height: 100%;
+    right: 0;
+    @media only screen and (max-width: 1679px) {
+      right: calc(-18vw);
+    }
+    @include bp(lg) {
+      position: static;
+      height: auto;
+      width: 100%;
+    }
+    img{
+      height: 100%;
+      object-fit: contain;
+      @include bp(lg) {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+  .row{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
+.product-top__btns{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  @include bp(xs) {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .btn{
+    width: 400px;
+    @include bp(xs) {
+      width: 100%;
+    }
+    +.btn{
+      margin-left: 30px;
+      @include bp(xs) {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+}
 
+.product-top__items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: -20px;
+  @include bp(xs) {
+    margin: 0 -5px -5px;
+  }
+  .col{
+    width: 280px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    @include bp(xs) {
+      width: 50%;
+      padding: 0 5px;
+    }
+  }
+}
 
-
-
-
-
-
-
+.product-top__item{
+  color: #000;
+  text-decoration: none;
+  &:hover{
+    color: #000;
+    text-decoration: underline;
+    img{
+      filter: brightness(110%);
+    }
+  }
+  >picture{
+    display: flex;
+    width: 100%;
+    height: 260px;
+    border-radius: 3px;
+    overflow: hidden;
+    @include bp(xs) {
+      height: calc(50vw - 20px);
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: linear .2s;
+    }
+  }
+  >span{
+    display: block;
+    padding: 13px 10px;
+    text-align: center;
+    font-size: 21px;
+    line-height: 140%;
+    text-transform: uppercase;
+    @include bp(xs) {
+      padding: 5px;
+      font-size: 14px;
+    }
+  }
+}

@@ -17,6 +17,9 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/product-schmuck.html');
     require('./assets/templates/layouts/shipping.html');
     require('./assets/templates/layouts/investment.html');
+    require('./assets/templates/layouts/new-schmuck.html');
+    require('./assets/templates/layouts/new-munzen.html');
+    require('./assets/templates/layouts/new-uhren.html');
 }
 
 // Depends
