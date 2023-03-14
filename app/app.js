@@ -20,6 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/new-schmuck.html');
     require('./assets/templates/layouts/new-munzen.html');
     require('./assets/templates/layouts/new-uhren.html');
+    require('./assets/templates/layouts/product-stamps.html');
 }
 
 // Depends

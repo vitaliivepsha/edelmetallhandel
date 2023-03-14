@@ -236,3 +236,35 @@
     }
   }
 }
+
+.stamp-popup{
+  width: 820px;
+  padding: 43px 59px 39px;
+  @include bp(xs) {
+    padding: 30px 15px 20px;
+  }
+  >img{
+    display: block;
+    object-fit: contain;
+    margin: 0 auto 20px;
+    &.img-stamp1{
+      width: 152px;
+      height: 207px;
+    }
+    &.img-stamp2{
+      width: 150px;
+      height: 200px;
+    }
+  }
+  >div{
+    text-align: center;
+    font-size: 21px;
+    line-height: 150%;
+    @include bp(xs) {
+      font-size: 16px;
+    }
+    p{
+      margin-bottom: 0;
+    }
+  }
+}
