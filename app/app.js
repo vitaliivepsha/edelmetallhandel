@@ -21,6 +21,9 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/new-munzen.html');
     require('./assets/templates/layouts/new-uhren.html');
     require('./assets/templates/layouts/product-stamps.html');
+    require('./assets/templates/layouts/blog.html');
+    require('_templates/layouts/article.html');
+    require('_templates/layouts/author.html');
 }
 
 // Depends
@@ -35,6 +38,7 @@ var Slider = require('_modules/slider');
 require('../node_modules/sumoselect/jquery.sumoselect.min');
 //require('../node_modules/ez-plus/src/jquery.ez-plus');
 require('../node_modules/sweetalert2/dist/sweetalert2');
+require('_modules/succinct/succinct');
 
 // Stylesheet entrypoint
 require('_stylesheets/app.scss');
@@ -361,5 +365,11 @@ $(function () {
                 $.cookie('exit', 1, { expires: 1 });
             //}
         }
+    });
+
+    // truncate text
+
+    $('.blog-item__text').succinct({
+        size: 115
     });
 });
